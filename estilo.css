@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 5, 2017, 3:58:06 PM
+    Author     : agustin
+*/
+.header{
+    background-color: blue;
+    height: 100px;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    float: left;
+}
+.conteiner{
+    height: 50px;
+    background-color: yellow;
+    float: right;
+}
+.title{
+    float: left;
+    
+}
+.searchnuser{
+    float: right;
+}
+.search{
+    float: left;
+}
+.user{
+    float: right;
+}
+.buscararea{
+    margin-top: 0px;
+    background-image: url(campo.png);
+    width: 449px;
+    height: 80px;
+    border-width: 0;
+    cursor: text;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    background-color: transparent;
+}
+.botonbuscar{
+    background-image: url(buscar.png);
+    width: 50px;
+    height: 50px;
+    border-width: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
