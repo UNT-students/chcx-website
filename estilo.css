@@ -54,7 +54,39 @@ div{
     text-align: center;
     cursor: pointer;
     display: inline-block;
+    font-size: 30px;
+    overflow: visible;
 }
+
+.usermenu{
+    visibility: hidden;
+    cursor: default;
+    background-color: grey;
+    color: white;
+    font-size: 40px;
+    width: 300px;
+    float: right;
+    display: block;
+    overflow: visible;
+    position: absolute;
+    margin-left: -200px;
+    margin-top: -35px;
+}
+
+.user:hover .usermenu{
+    visibility: visible;
+}
+
+.usermenu ul li{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: lightslategray;
+    margin: 10px;
+    margin-left: -15px;
+    width: 250px;
+    text-align: center;
+}
+
 .buscararea{
     margin-top: 0px;
     background-image: url(buscar.png);
@@ -92,10 +124,59 @@ div{
     display: inline-block;
 }
 
+
+
 .middle{
     background-color: green;
     width: 70%;
     margin-left: 15%;
+}
+
+.contenido{
+    background-color: white;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.newcomentario{
+    width: 70%;
+    background-color: lightgray;
+    margin-left: 15%;
+}
+
+.comenarea{
+    width: 100%;
+    
+}
+
+.comentario{
+    width: 70%;
+    background-color: white;
+}
+.accionescom{
+    background-color: orange;
+}
+
+.newresponsebutton{
+    height: 30px;
+    width: 100px;
+    background-color: blue;
+    overflow: visible;
+    text-decoration: none;
+}
+
+.newresponsebutton a{
+    text-decoration: none;
+    color: white;
+}
+
+.newresponse{
+    border: 2px solid black;
+    position: absolute;
+    visibility: hidden;
+}
+#newresponse:target{
+    visibility: visible;
 }
 
 .filters{
