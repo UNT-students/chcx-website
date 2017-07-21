@@ -6,46 +6,53 @@ and open the template in the editor.
 -->
 <html>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="estilo.css" type="text/css" />
+
 <link rel="shortcut icon" href="favicon.ico">
 <title>CHCX en 3D</title>
     
     <body>
-        <div class="header">
-            <div class="logo">
-
-            </div>
-            <div class="conteiner">
-                <div class="title">
-                    <h1>CHCX en 3D</h1>
+        <div id="header">
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="paw-icon.png">
+                    </a>
                 </div>
-                <div class="searchnuser">
-                    <div class="search">
-                        <form>
-                            <input type="text" name="Buscar" class="buscararea" />
-                            <!-- <input class="botonbuscar" type="submit" name="buscarbot" value=""> -->
-                        </form>
-                    </div>
-                    <div class="user">
-                        <p>Usuario</p>
-                        <div class="usermenu">
-                            <ul type="none">
-                                <li>Cuenta</li>
-                                <li>Salir</li>
-                            </ul>
-                        </div>
+                <div id="menu">
+                    
+                    
+                    <div id="loginm"  class="button">
+                        
+                        <label class="userlabel" for="userbutton">
+                            <img src="menu.png" class="menubutton"/>
+                        </label>
+                        
                     </div>
                     
                 </div>
-                <div class="menubutton">
-                        
-                </div>
             </div>
-        </div>
+        <input type="checkbox" id="userbutton" hidden=""/>
+        <ul id="div2" class="menu">
+                            <li id="cuenta" class="category"><a href="userCuenta.html">Cuenta</a></li>
+                            
+                            <li id="newpost" class="category"><a href="postCreator.html">Nuevo Post</a></li>
+                            <li id="exit" class="category"><a href="index.html">Salir</a></li>
+                            
+                        </ul>
         
         <div class="middle">
-            <div class="filters">
+             <div class="filtersbutton" id="filtersbutton">
+                 
+                 <label class="buttonexpand" for="buttonexpand">
+                    V Buscar
+                 </label>
+                 
+            </div>
+            <input type="checkbox" id="buttonexpand"  hidden=""/>
+            <div class="filters" id="filters">
                 <form>
+                    <input type="text" name="Buscar" class="buscararea" />
                     <select name="categoria" id="categoria" class="filtersel">
                         <option>
                             Todas las categorias
@@ -63,8 +70,10 @@ and open the template in the editor.
                             categoria 4
                         </option>
                     </select>
+                    <input type="submit" name="botonbuscar" id="botonbuscar" class="botonbuscar" value="Buscar">
                 </form>
             </div>
+           
             <div class="publist">
                 <div class="post">
                     <div class="titleh">

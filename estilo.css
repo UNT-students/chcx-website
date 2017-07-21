@@ -8,11 +8,12 @@ and open the template in the editor.
     Author     : agustin
 */
 div{
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .header{
     background-color: blue;
     height: 60px;
+    margin-top: -10px;
 }
 .logo{
     height: 50px;
@@ -73,8 +74,12 @@ div{
     margin-top: -35px;
 }
 
-.user:hover .usermenu{
-    visibility: visible;
+#userbutton:checked ~ .menu{
+    position: fixed;
+    display: block;
+    width: 20%;
+    margin-left: 80%;
+    
 }
 
 .usermenu ul li{
@@ -87,34 +92,8 @@ div{
     text-align: center;
 }
 
-.buscararea{
-    margin-top: 0px;
-    background-image: url(buscar.png);
-    background-repeat: no-repeat;
-    background-color: lightblue;
-    width: 100%;
-    height: 50px;
-    border-width: 3px;
-    cursor: text;
-    color: white;
-    font-size: 30px;
-    padding-left: 50px;
-    padding-right: 10px;
-    border-radius: 50px;
-    border-color: white;
-    border-style: solid;
-    /*background-color: transparent;*/
-}
-.botonbuscar{
-    background: url(buscar.png) no-repeat center;
-    /*background-repeat: no-repeat;*/
-    background-position: right;
-    width: 50px;
-    height: 50px;
-    border-width: 0;
-    cursor: pointer;
-    background-color: transparent;
-}
+
+
 
 .menubutton{
     background-image: url(menu.png);
@@ -181,16 +160,107 @@ div{
 
 .filters{
     background-color: lightsteelblue;
-    height: 50px;
+    /*height: 50px;*/
+/*    margin-top: 60px;*/
+    display: none;
+}
+#header{
+    margin-top: -60px;
+    
 }
 
+.menubutton{
+    width: 50px;
+    height: 50px;
+    visibility: visible;
+    margin-top: -20px;
+}
+
+#userbutton{
+    margin-top: 60px;
+}
+
+#buttonexpand:checked ~ .filters{
+    display: block;
+}
+.buttonexpand{
+    border: darkslategray 2px solid;
+    width: 100%;
+}
+/*#filtersbutton:hover ~ #filters{
+    display: block;
+}*/
+
+/*#filtersbutton:hover+#filters{
+    display: block;
+}*/
+
+#filtersbutton:hover ~ #header{
+    background-color: green;
+}
+
+.middle{
+    margin-top: 60px;
+}
+.buscararea{
+    margin-top: 0px;
+    background-image: url(buscar.png);
+    background-repeat: no-repeat;
+    background-color: lightblue;
+    width: 40%;
+    height: 100%;
+    border-width: 3px;
+    cursor: text;
+    color: white;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-right: 10px;
+    border-radius: 50px;
+    border-color: white;
+    border-style: solid;
+    /*background-color: transparent;*/
+}
 .filtersel{
     height: 50px;
+    width: 30%;
     font-size: 30px;
-    float: right;
+    border: solid white 2px;
+    border-radius: 5px;
+    /*float: right;*/
     background-color: lightblue;
 }
+.botonbuscar{
+    /*background: url(buscar.png) no-repeat center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: right;*/
+    float: right;
+    width: 15%;
+    height: 40px;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 5px;
+    color: white;
+    background-color: darkslategrey;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 5px;
+    /*background-color: transparent;*/
+}
 
+.botonbuscar:hover{
+    background-color: yellow;
+    color: black;
+}
+
+.filtersbutton{
+    align-content: center;
+    background-color: gray;
+    text-align: center;
+}
+.filtersbutton:active{
+    background-color: red;
+}
 
 .post{
     width: 80%;
@@ -215,9 +285,10 @@ div{
 
 .titleh{
     /*margin-top: -16px;*/
-    height: 2em;
+    height: 1em;
     width: 100%;
     background-color: orange;
+    margin-top: 10px;
     
 }
 
@@ -242,7 +313,7 @@ div{
 .du{
  float: left;
  /*width: 266px;*/
- /*height: 50px;*/
+ height: auto;
  /*margin-top: 0.25em;*/
 }
 .dateh{
@@ -307,121 +378,10 @@ div{
     text-align: center;
 }
 
-@media only screen and (max-width: 830px) and (min-width: 600px){
-    .title{
-        visibility: hidden;
-        width: 0%;
-    }
-    
-    .searchnuser{
-    float: right;
-    width: 100%;
-}
-.search{
-    float: left;
-    width: 70%;
-}
-.user{
-    float: right;
-    width: 83px;
-    height: 100%;
-    background-color: lavenderblush;
-}
-.buscararea{
-    margin-top: 0px;
-    background-image: url(buscar.png);
-    background-repeat: no-repeat;
-    background-color: lightblue;
-    width: 100%;
-    height: 50px;
-    border-width: 3px;
-    cursor: text;
-    color: white;
-    font-size: 30px;
-    padding-left: 50px;
-    padding-right: 10px;
-    border-radius: 50px;
-    border-color: white;
-    border-style: solid;
-    /*background-color: transparent;*/
+#loginm:hover + .titleh{
+    background-color: gold;
 }
 
-
-}
-
-@media only screen and (max-width:680px){
-    .conteiner{
-        width: 90%;
-    }
-    .logo{
-        width: 10%;
-        /*height: auto;*/
-    }
-    .menubutton{
-    background-image: url(menu.png);
-    visibility: visible;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    float: right;
-    margin-top: 5px;
-    margin-right: 5px;
-    }
-    
-    .cath{
-        width: 0%;
-        border-width: 0px;
-        visibility: hidden;
-    }
-    .post div{
-        border-width: 0px;
-    }
-    .du{
-        float: right;
-        width: 100%;
-        border-width: 0px;
-    }
-    .dateh{
-        width: 50%;
-        border-width: 0px;
-    }
-    .userh{
-        width: 50%;
-        border-width: 0px;
-    }
-    
-    .searchnuser{
-        visibility: hidden;
-        width: 0%;
-    }
-    .title{
-        visibility: visible;
-        width: auto;
-        display: inline-block;
-        /*width: 80%;*/
-    }
-    .filtersel{
-        width: 100%;
-    }
-    .middle{
-        width: 100%;
-        margin-left: 0%;
-    }
-    .publist{
-        width: 100%;
-    }
-    .post{
-        width: 100%;
-        margin-left: 0px;
-    }
-    .paginator{
-        width: 100%;
-        margin-left: 0%;
-    }
-    .footer{
-        width: 100%;
-    }
-}
 /*este va a ser para celulares*/
 @media only screen and (orientation: portrait)
 /*and (max-width: 960px)*/
@@ -433,6 +393,189 @@ div{
         visibility: hidden;
         width: 0%;
     }
+    #header{
+        position: static;
+        margin-top: 0px;
+        height: 120px;
+    }
+    #logo{
+        height: 120px;
+        width: 120px;
+    }
+    .searchnuser{
+    float: right;
+    width: 100%;
+}
+.search{
+    float: left;
+    width: 70%;
+}
+.user{
+    float: right;
+    width: 83px;
+    height: 100%;
+    background-color: lavenderblush;
+}
+.buscararea{
+    margin-top: 0px;
+    background-image: url(buscar.png);
+    background-repeat: no-repeat;
+    background-color: lightblue;
+    width: 90%;
+    height: 50px;
+    border-width: 3px;
+    cursor: text;
+    color: white;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-right: 10px;
+    border-radius: 50px;
+    border-color: white;
+    border-style: solid;
+    /*background-color: transparent;*/
+}
+    .conteiner{
+        width: 90%;
+    }
+    .logo{
+        width: 10%;
+        /*height: auto;*/
+    }
+    #menu{
+        width: auto;
+        overflow: visible;
+        width: -webkit-calc(100% - 120px);
+        width: -moz-calc(100% - 120px);
+        width: calc(100% - 120px);
+    }
+    #loginm{
+    
+    }
+    #loginm #userbutton{
+        display: none;
+    }
+    #div2{
+        position: static;
+        margin-left: 0px;
+        width: 100%;
+        
+    }
+    
+    #loginm:hover #div2{
+        display: block;
+        width: 100%;
+        
+    }
+    #loginm:hover + #header{
+        margin-bottom: 500px;
+    }
+    #loginm:hover + .titleh{
+        background-color: blueviolet;
+    }
+    #loginm:hover + .middle{
+        margin-top: 500px;
+        padding-top: 500px;
+    }
+    .category{
+        width: 100%;
+        height: 2em;
+        
+    }
+    #loginm p{
+        color: transparent;
+    }
+    #loginm .category a{
+        color: blue;
+    }
+    
+    .cath{
+        width: 0%;
+        border-width: 0px;
+        visibility: hidden;
+    }
+    .post div{
+        border-width: 0px;
+    }
+    .du{
+        float: right;
+        width: 100%;
+        border-width: 0px;
+    }
+    .dateh{
+        width: 50%;
+        border-width: 0px;
+    }
+    .userh{
+        width: 50%;
+        border-width: 0px;
+    }
+    
+    .searchnuser{
+        visibility: hidden;
+        width: 0%;
+    }
+    .title{
+        visibility: visible;
+        width: auto;
+        display: inline-block;
+        /*width: 80%;*/
+    }
+    .filters{
+        height: auto;
+        overflow: auto;
+    }
+    .filters form{
+        /*height: 100%;*/
+    }
+    .filtersel{
+        width: 100%;
+    }
+    .botonbuscar{
+        width: auto;
+        height: auto;
+        font-size: 100px;
+    }
+    .middle{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .publist{
+        width: 100%;
+    }
+    .post{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .paginator{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .footer{
+        width: 100%;
+    }
+    
+    .title{
+        width: 0%;
+        visibility: hidden;
+        
+    }
+    .conteiner{
+        width: 70%;
+    }
+    .logo{
+        width: 30%;
+    }
+    .filtersel{
+        font-size: 18px;
+    }
+}
+
+
+/*@media only screen and (max-width: 830px) and (min-width: 600px){
+    .title{
+        visibility: hidden;
+        width: 0%;
+    }
     
     .searchnuser{
     float: right;
@@ -464,16 +607,23 @@ div{
     border-radius: 50px;
     border-color: white;
     border-style: solid;
-    /*background-color: transparent;*/
+    background-color: transparent;
 }
+
+
+}*/
+
+/*@media only screen and (max-width:680px){
     .conteiner{
         width: 90%;
     }
     .logo{
         width: 10%;
-        /*height: auto;*/
+        height: auto;
     }
-    .menubutton{
+    
+    
+    #loginm{
     background-image: url(menu.png);
     visibility: visible;
     width: 50px;
@@ -514,7 +664,7 @@ div{
         visibility: visible;
         width: auto;
         display: inline-block;
-        /*width: 80%;*/
+        width: 80%;
     }
     .filtersel{
         width: 100%;
@@ -537,7 +687,8 @@ div{
     .footer{
         width: 100%;
     }
-    
+}*/
+/*@media only screen and (max-width: 300px){
     .title{
         width: 0%;
         visibility: hidden;
@@ -552,22 +703,4 @@ div{
     .filtersel{
         font-size: 18px;
     }
-}
-
-
-@media only screen and (max-width: 300px){
-    .title{
-        width: 0%;
-        visibility: hidden;
-        
-    }
-    .conteiner{
-        width: 70%;
-    }
-    .logo{
-        width: 30%;
-    }
-    .filtersel{
-        font-size: 18px;
-    }
-}
+}*/
